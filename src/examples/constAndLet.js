@@ -39,6 +39,11 @@ export function constAndLet() {
     // console.log("redeclared", froYo )
   //
   //
+  // const canIChangeThis = "What is this variable?"
+  // console.log(canIChangeThis)
+  //
+  // canIChangeThis = "Did I change it?"
+  // console.log(canIChangeThis)
 
   // const canIChangeThis = "What is this variable?"
   // console.log(canIchangeThis)
@@ -49,8 +54,8 @@ export function constAndLet() {
   // const toppings = ["sprinkles", "strawberries"]
   //
   // toppings.push("fudge")
-  //
-  //
+  // //
+  // //
   // console.log(toppings)
 
   // ["sprinkles", "strawberries", "fudge"]

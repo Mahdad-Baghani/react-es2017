@@ -21,6 +21,8 @@ redeclare?  yes               no             no
 reassign?   yes               no             yes
 hoisted?    yes               no             no
 ```
+### Import/Export syntax
 - 
+
 ## Acknowledgments
 - Carl Peaslee
