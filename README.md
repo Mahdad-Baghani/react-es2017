@@ -8,5 +8,19 @@ Carl Peaslee's LinkedIn Learning course [here](https://www.linkedin.com/learning
 ## Built With
 - React, Yarn, ES6+.
 
+## NOTES
+### When choosing `Const`, `Let` and `Var`:
+- What is the scope?
+- Can these variables be redeclared?
+- Can this variable be reassigned?
+- Can this variable be hoisted?
+```
+            var               const          let
+scope       global or local   block          block
+redeclare?  yes               no             no
+reassign?   yes               no             yes
+hoisted?    yes               no             no
+```
+- 
 ## Acknowledgments
 - Carl Peaslee
