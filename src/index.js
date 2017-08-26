@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import {
-  constAndLet
-  
+  // constAndLet,
+  // arrowFunctions,
+  // destructuring,
+  objAssemblyComputedProps
 } from './examples'
 
-constAndLet()
-
+// constAndLet()
+// arrowFunctions()
+// destructuring()
+objAssemblyComputedProps()
 ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

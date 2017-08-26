@@ -1,6 +1,6 @@
 export function arrowFunctions() {
-
-  // 
+  //
+  //
   // function withACallBack(options, callback) {
   //   callback(options)
   // }
@@ -33,9 +33,9 @@ export function arrowFunctions() {
   //
   // }
   //
-  // console.log(store.what())       // '101 Main Street'
+  // console .log(store.what())       // '101 Main Street'
   // console.log(store.arrow())      // undefined
-  //
+  // 
   //
   // function Welcome(){
   //   this.happy = 'yes'
@@ -48,8 +48,8 @@ export function arrowFunctions() {
   // }
   //
   // new Welcome()
-                  // undefined
-
-                  // {happy: 'yes'}
+  //                 undefined
+  //
+  //                 {happy: 'yes'}
 
 }
