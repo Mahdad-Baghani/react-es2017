@@ -41,6 +41,32 @@ hoisted?    yes               no             no
 new variable and then choose any number
 of keys to create into stand alone variables
 we also specify the object we're destructuring
+- use destructuring with arrays so if I have an array called horsdoeuvres and in it I've named all these delicious horsdoeuvres and I wanted to structure that, you can use almost the same syntax as object destructuring but with an array. So I can create a new variable that holds the index of these objects and I can skip over ones that I don't want to access, and then later on in my code, I can access those variables as these variable names, rather than as, say, horsdoeuvre, square bracket, one.
+
+### Spread Operator
+- `...` that allows you to pull apart the values of an array and make use of them as though they were instead a series or collection of values, rather than a traditional array.
+```
+<Container>
+  {...props}
+</Container  
+```
+- very useful for helping you disassemble arrays, and in some cases, objects, and if you don't have the spread operator available to you for objects, you can use Object.assign.
+```
+const sauces = ['bbq', 'buffalo', 'honey mustard']
+
+const dressings = ['ranch', 'balsamic', 'thousand island']
+
+const superSecretSauce = [...sauces, ...dressings]
+```
+
+### Template Literals
+- allows us to easily insert variables into a string with back ticks and `${}`
+```
+let exclamation = 'yowza'
+let noun = 'jumbo jet'
+const madlibs = `"Oh ${exclamation}!" they said.
+                 "I've never seen a ${noun} before!" `
+```
 
 ## Acknowledgments
 - Carl Peaslee

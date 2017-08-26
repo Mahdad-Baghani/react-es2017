@@ -6,12 +6,9 @@ import {
   // constAndLet,
   // arrowFunctions,
   // destructuring,
-  objAssemblyComputedProps
+  // objAssemblyComputedProps,
+  spreadOperator
 } from './examples'
-
-// constAndLet()
-// arrowFunctions()
-// destructuring()
-objAssemblyComputedProps()
+spreadOperator()
 ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

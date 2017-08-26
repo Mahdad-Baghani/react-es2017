@@ -7,11 +7,22 @@ let options = () => {
   },
   body: JSON.stringify({
     //we'll write this object later
+    query: `{
+      allPoems(
+        first: 1,
+        skip: ${randomInt(0, 160)}
+      ) {
+        title
+        author
+        lines
+        text
+      }
+    }`
   })
 }
 
 function randomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min +1)) + min 
+  return Math.floor(Math.random() * (max - min +1)) + min
 }
