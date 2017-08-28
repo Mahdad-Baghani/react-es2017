@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Markup, Editor, Container, Column, Row, RuleInput, RuleLabel, StyleInput, Button, Document} from './styled'
-import hlsjs from 'highlight.js'
+import hljs from 'highlight.js'
 
 class App extends Component {
 
@@ -84,7 +84,7 @@ class App extends Component {
 
   convertToMarkup = (text = "") => {
     return {
-      __html: hlsjs.highlightAuto(text).value
+      __html: hljs.highlightAuto(text).value
     }
   }
 
@@ -116,8 +116,8 @@ class App extends Component {
         ruleObjects.push(newRule)
       }
     }
-    hlsjs.registerLanguage('language', this.language(ruleObjects))
-    hlsjs.configure({
+    hljs.registerLanguage('language', this.language(ruleObjects))
+    hljs.configure({
       languages: ['language']
     })
   }
@@ -126,9 +126,25 @@ class App extends Component {
     this.registerLanguage(nextState)
   }
 
+  prepareStyles = () => {
+    let {rules} = this.state
+    let styles = []
+    for (let i = 0; i < rules; i++) {
+      styles.push(`
+        .hljs-${this.state['name' + i]} {
+          ${this.state['style' + i]}
+        }
+      `)
+    }
+
+    let newStyles = "".concat(styles).replace(",", "")
+
+    return newStyles
+  }
+
   render() {
     let {editor} = this.state
-    let {handleChange, newFields, rules, convertToMarkup} = this
+    let {handleChange, newFields, rules, convertToMarkup, prepareStyles} = this
     return (
       <Container>
         <Column>
@@ -145,11 +161,12 @@ class App extends Component {
           </Button>
           <Document>
             <Editor
-              name={"Editor"}
+              name={"editor"}
               value={editor}
               onChange={handleChange}
             />
             <Markup
+              customStyles={prepareStyles}
               dangerouslySetInnerHTML={convertToMarkup(editor)}
             />
           </Document>
