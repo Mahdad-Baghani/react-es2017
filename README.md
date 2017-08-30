@@ -106,11 +106,30 @@ like a function. an automatically invoked function
 
 ## Promises and Async
 - The Promise allows us to make asynchronous actions in JavaScript.
-`new Promise( (resolve, reject) => {})`
+- `new Promise( (resolve, reject) => {})`
 - Fetch gives us an easy way to make promise enabled http requests without
 using an outside library.
-`fetch(url, options).then(resp => { ... })`
-- 
+- `fetch(url, options).then(resp => { ... })`
+```fetch(shakespeareApi, options()).then( res => res.json()).then(json =>
+{
+  console.log('json =>', json)
+})
+```
+### Async and Try/Catch (not technically part of specs yet - needs babel compiling)
+- `async function(){ ... }`
+- `try{ ... }catch(e){ ... }`
+- `throw error` -  makes sure that the error is still flagged as an error,
+and that means if we have another catch block wrapping this, it'll get caught in that.
+- Quiz
+  - The "includes" method can be used to search an object's properties for a specific value or key.
+    - false
+  - What are the two primary outcomes for a promise?
+    - Resolve or reject
+  - What is the fetch function's first argument?
+    - URL string
+  - How might you instruct an async function to stop running code within the `try`
+  block and begin running code within the `catch` block?
+    - Use `throw` to pass a variable into the `catch` block as an exception or error.
 
 ## Acknowledgments
 - Carl Peaslee

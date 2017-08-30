@@ -81,7 +81,16 @@ let options = () => {
   }
 } //end options
 
-fetch(shakespeareApi, options()).then( res => res.json()).then(json =>
-{
-  console.log('json =>', json)
-})
+
+
+export async function getRandomPoem() {
+  try {
+    let result = await fetch(shakespeareApi, options())
+    let response = await result.json()
+    let poem = response.data.allPoems[0]
+    return poem.text
+  } catch(error) {
+    console.log("Error in getRandomPoem", error)
+    throw error
+  }
+}
