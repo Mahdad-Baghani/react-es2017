@@ -68,5 +68,13 @@ const madlibs = `"Oh ${exclamation}!" they said.
                  "I've never seen a ${noun} before!" `
 ```
 
+###Classes
+-`class` is a function that returns a special object that has all these different
+methods and types set on it from another function.
+- `constructor() ` function gets called when you instantiate your class. It allows
+you to pass in values as arguments and it allows you to use those arguments to inform
+the creation of your class.
+- 
+
 ## Acknowledgments
 - Carl Peaslee
