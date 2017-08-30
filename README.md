@@ -8,7 +8,7 @@ Carl Peaslee's LinkedIn Learning course [here](https://www.linkedin.com/learning
 ## Built With
 - React, Yarn, ES6+.
 
-## NOTES
+## Variables and Declarations
 ### When choosing `Const`, `Let` and `Var`:
 - What is the scope?
 - Can these variables be redeclared?
@@ -42,7 +42,12 @@ new variable and then choose any number
 of keys to create into stand alone variables
 we also specify the object we're destructuring
 - use destructuring with arrays so if I have an array called horsdoeuvres and in it I've named all these delicious horsdoeuvres and I wanted to structure that, you can use almost the same syntax as object destructuring but with an array. So I can create a new variable that holds the index of these objects and I can skip over ones that I don't want to access, and then later on in my code, I can access those variables as these variable names, rather than as, say, horsdoeuvre, square bracket, one.
+- Quiz  
+  - You cannot mix object assembly shorthand and the traditional object declaration
+  syntax.
+    - false
 
+## Arguments and Template Literals
 ### Spread Operator
 - `...` that allows you to pull apart the values of an array and make use of them as though they were instead a series or collection of values, rather than a traditional array.
 ```
@@ -67,6 +72,11 @@ let noun = 'jumbo jet'
 const madlibs = `"Oh ${exclamation}!" they said.
                  "I've never seen a ${noun} before!" `
 ```
+- Quiz
+  - Template literals allow you to insert variables into strings
+    - true
+  - Does spread operator syntax always work with objects?
+    - No, it isn't officially part of the ecmascript spec.
 
 ## Classes
 -`class` is a function that returns a special object that has all these different
@@ -79,6 +89,27 @@ the creation of your class.
 - when we call a component from React, we're actually extending the React
 component class.
 - `super()` is a method that's available to us within a `class`, specifically an extended `class`, and it calls one of the methods of a class's parent class.
+
+### Getter, setter and static
+- `.includes` is a new ES2016 method that is available on Array, and it iterates
+over the Array looking for something.
+- a `getter` function means that it can be invoked without actually being called
+like a function. an automatically invoked function
+- Quiz
+  - A "getter" method represents a function which will be invoked whenever it's referenced.
+    - true
+  - Class declarations are hoisted.
+    - false
+  - What does the "super" keyword allow you to do?
+    - allows you to access the properties and methods of an extended class's
+    parent class.
+
+## Promises and Async
+- The Promise allows us to make asynchronous actions in JavaScript.
+`new Promise( (resolve, reject) => {})`
+- Fetch gives us an easy way to make promise enabled http requests without
+using an outside library.
+`fetch(url, options).then(resp => { ... })`
 - 
 
 ## Acknowledgments

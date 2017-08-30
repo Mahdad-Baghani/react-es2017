@@ -7,8 +7,11 @@ import {
   // arrowFunctions,
   // destructuring,
   // objAssemblyComputedProps,
-  spreadOperator
+  // spreadOperator,
+  promises
 } from './examples'
-spreadOperator()
+
+promises()
+
 ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

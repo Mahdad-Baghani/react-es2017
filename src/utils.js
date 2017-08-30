@@ -22,14 +22,24 @@ class Random {
 class colorGenerator extends Random {
   constructor(max, allowNegatives, type = 'rgb') {
     super(max, allowNegatives)
-    if (this.types.includes(type)) {
+    if (this.typeList  .includes(type)) {
       this.type = type
     } else {
       this.type = 'rgb'
     }
   }
 
-  types = ['hex', 'rgb']
+  typeList = ['hex', 'rgb']
+
+  get types() {
+    return this.typeList
+  } //end get types
+
+  set types(types = [ 'hex', 'rgb' ]) {
+    if (Array.isArray(types)) {
+      this.typeList = types.map(type => type)
+    }
+  } //end set types
 
   color() {
     let r = super.randomInt(0,255)
@@ -40,7 +50,7 @@ class colorGenerator extends Random {
     } else {
       return `rgb(${r}, ${g}, ${b})`
     }
-  }
+  } //end color method
 
 } //end colorGenerator
 
@@ -69,4 +79,9 @@ let options = () => {
       }`
     })
   }
-}
+} //end options
+
+fetch(shakespeareApi, options()).then( res => res.json()).then(json =>
+{
+  console.log('json =>', json)
+})
