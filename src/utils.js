@@ -19,7 +19,32 @@ class Random {
 
 } //end Random class
 
-export const rando = new Random()
+class colorGenerator extends Random {
+  constructor(max, allowNegatives, type = 'rgb') {
+    super(max, allowNegatives)
+    if (this.types.includes(type)) {
+      this.type = type
+    } else {
+      this.type = 'rgb'
+    }
+  }
+
+  types = ['hex', 'rgb']
+
+  color() {
+    let r = super.randomInt(0,255)
+    let g = super.randomInt(0,255)
+    let b = super.randomInt(0,255)
+    if (this.type === 'hex') {
+      return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`
+    } else {
+      return `rgb(${r}, ${g}, ${b})`
+    }
+  }
+
+} //end colorGenerator
+
+export const rando = new colorGenerator()
 
 const shakespeareApi = "https://api.graph.cool/simple/v1/shakespeare"
 
